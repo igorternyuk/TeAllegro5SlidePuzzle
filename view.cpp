@@ -53,13 +53,17 @@ void View::run()
                                al_map_rgb(66,114,229));
                 if(t->number() <= 9)
                 {
-                    al_draw_text(_pFontLarge, al_map_rgb(0,0,0),t->x() + SlidePuzzle::CELL_SIZE * 1 / 3,
+                    al_draw_text(_pFontLarge, al_map_rgb(0,0,0),t->number() == 1 ?
+                                     t->x() + SlidePuzzle::CELL_SIZE * 2 / 5:
+                                     t->x() + SlidePuzzle::CELL_SIZE * 1 / 3,
                                  t->y() + SlidePuzzle::CELL_SIZE * 1 / 3, 0,
                                  std::to_string(t->number()).c_str());
                 }
                 else
                 {
-                    al_draw_text(_pFontLarge, al_map_rgb(0,0,0),t->x() + SlidePuzzle::CELL_SIZE / 3,
+                    al_draw_text(_pFontLarge, al_map_rgb(0,0,0),t->number() == 11 ?
+                                     t->x() + SlidePuzzle::CELL_SIZE * 3 / 10 :
+                                     t->x() + SlidePuzzle::CELL_SIZE * 1 / 5,
                                  t->y() + SlidePuzzle::CELL_SIZE * 1 / 3, 0,
                                  std::to_string(t->number()).c_str());
                 }

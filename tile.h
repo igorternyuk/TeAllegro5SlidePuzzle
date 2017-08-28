@@ -3,6 +3,7 @@
 
 #include "constants.h"
 #include <algorithm>
+#include <cmath>
 
 enum class Direction {LEFT, RIGHT, UP, DOWN};
 class Tile
